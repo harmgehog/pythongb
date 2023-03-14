@@ -1,7 +1,5 @@
 # Задача 10: На столе лежат n монеток. Найти минимальное кол-во для перевернуть.
 n = [__import__('random').randint(0, 1) for _ in range(15)]
-print(n.count(0) if n.count(0) < n.count(1) else n.count(1))
-# альтернатива
 print(sum(n) if sum(n) < len(n)//2 else len(n) - sum(n))
 
 # Задача 12: Петя и Катя найти числа когда дана сумма и произведение
