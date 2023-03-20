@@ -13,20 +13,26 @@ n = int(input())
 
 # Дополнительная задача. числа от 1 до 9 написаны в ряд,
 # можно вставить + и - в любое место, нужно найти все комбинации, сумма которых = 100
-s, d, summ, count = '123456789', {'0': '', '1': '+', '2': '-'}, 100, 0
+# from datetime import datetime
+#
+# start_time = datetime.now()
+y = 0
+for a in '+-*/ ':
+    for b in '+-*/ ':
+        for c in '+-*/ ':
+            for d in '+-*/ ':
+                for e in '+-*/ ':
+                    for f in '+-*/ ':
+                        for j in '+-*/ ':
+                            for g in '+-*/ ':
+                                phrase = '1' + a + '2' + b + '3' + c + '4' + d + '5' + e + '6' + f + '7' + j + '8' + g + '9'
+                                phrase = phrase.replace(' ', '')
+                                if eval(phrase) == 100:
+                                    print(phrase, '= 100')
+                                    y += 1
+print(y)
+# print(datetime.now() - start_time)
 
-for n in range(int('22222222', 3)):
-    lst, rslt = [], ''
-
-    if n == 0: lst.append('0')
-    while n:
-        lst.append(str(n % 3)); n //= 3
-
-    num = f"{''.join(lst[::-1]):0>8}"
-
-    for i, j in list(zip(s, num)): rslt += i + d[j]
-
-    if eval(rslt + '9') == summ:
-        print(f'{rslt + "9"}={summ}'); count += 1
-
-print(f'Всего {count} выражений')
+# вторая дополнительная задача
+n = [91, 228, 9]
+[print(x[:-4], end='') for x in sorted([str(i)+'9999' for i in n])[::-1]]

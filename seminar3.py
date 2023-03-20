@@ -8,10 +8,20 @@ lst, k = [1, 2, 3, 4, 5], 3
 print(lst[k:] + lst[:k])
 
 # Задача №21. Напишите программу для печати всех уникальных значений в словаре.
-dictionary = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": " S005 "}, {" V ": " S009 "}]
-print(set(v for d in dictionary for v in d.values()))
+lst = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": " S005 "}, {" V ": " S009 "}]
+n = set()
+for i in lst:
+    for v in i.values():
+        n.add(v)
+print(n)
+# или быстро!!!
+print(set(v for d in lst for v in d.values()))
 
 # Задача №23. Дан массив, состоящий из целых чисел. Напишите программу, которая подсчитает количество
 # элементов массива, больших предыдущего (элемента с предыдущим номером)
-array = [0, -1, 5, 2, 3]
-print(sum([1 for i in range(1, len(array)) if array[i] > array[i-1]]))
+arr = [0, -1, 5, 2, 3]
+print(sum([1 for i in range(1, len(arr)) if arr[i] > arr[i-1]]))
+count = 0
+for index in range(1, len(arr)):
+    if arr[index] > arr[index - 1]:
+        count += 1
