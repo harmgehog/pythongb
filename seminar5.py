@@ -1,15 +1,10 @@
-
 # task 31
-# def fib(n):
-#     return 1 if n<2 else fib(n-1) + fib(n-2)
-#
-#
-# def main():
-#     print(f'Это число: {fib(int(input("Введите порядковый номер члена ряда фибоначчи: ")))}')
-#
-#
-# if __name__ == '__main__':
-#     main()
+def fib(n):
+    return 1 if n<2 else fib(n-1) + fib(n-2)
+
+
+print(f'Это число: {fib(int(input("Введите порядковый номер члена ряда фибоначчи: ")))}')
+
 
 # task 33
 def journal(fin):
@@ -19,13 +14,8 @@ def journal(fin):
     return ''
 
 
-def main():
-    print(f'Мама, я починил: {journal([1, 3, 3, 5, 4])}')
+print(f'Мама, я починил: {journal([1, 3, 3, 5, 4])}')
 
-
-if __name__ == '__main__':
-    main()
-#
 
 # task 37
 def reversa(a):
@@ -34,12 +24,8 @@ def reversa(a):
     print(s, end=' ')
 
 
-def main():
-    n = int(input())
-    reversa(n-1)
+n = int(input())
+reversa(n-1)
 
-
-if __name__ == '__main__':
-    main()
 
 
