@@ -3,7 +3,7 @@
 # встречаются в обоих наборах.
 # Пользователь вводит 2 числа. n - кол-во элементов первого множества. m - кол-во
 # элементов второго множества. Затем пользователь вводит сами элементы множеств.
-# print(*sorted(set(input().split()) & set(input().split()), key=int))
+print(*sorted(set(input().split()) & set(input().split()), key=int))
 
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. Она растет на
 # круглой грядке, причем кусты высажены только по окружности. Таким образом, у
@@ -19,10 +19,15 @@
 # заданной во входном файле грядки.
 from random import *
 #
-# l = [int(input()) for _ in range(int(input()))]
-# print(max([l[i-1]+l[i]+l[i+1] for i in range(-1, len(l)-1)]))
+l = [int(input()) for _ in range(int(input()))]
+print(max([l[i-1]+l[i]+l[i+1] for i in range(-1, len(l)-1)]))
 
 n, cut = int(input('Кустов: ')), int(input('Срез по: '))
 lst = [randint(1, 9) for _ in range(n)]  # ягод
 lst += lst[:(cut-1)]
 print(max([sum(lst[i:i+cut]) for i in range(n)]))
+
+
+# дополнительная задача
+from num2words import num2words
+print(num2words(45321111, lang='ru'))
