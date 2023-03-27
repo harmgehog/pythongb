@@ -27,7 +27,6 @@ lst = [randint(1, 9) for _ in range(n)]  # ягод
 lst += lst[:(cut-1)]
 print(max([sum(lst[i:i+cut]) for i in range(n)]))
 
-
 # дополнительная задача
 from num2words import num2words
 print(num2words(45321111, lang='ru'))
